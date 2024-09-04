@@ -1,0 +1,36 @@
+CREATE TABLE Donors (
+    DonorID INT PRIMARY KEY,
+    DonorName VARCHAR(100),
+    ContactInfo VARCHAR(100)
+);
+
+CREATE TABLE ClothingItems (
+    ClothingID INT PRIMARY KEY,
+    ItemName VARCHAR(100),
+    Size VARCHAR(50),
+    Quantity INT
+);
+
+CREATE TABLE Orphanages (
+    OrphanageID INT PRIMARY KEY,
+    OrphanageName VARCHAR(100),
+    Location VARCHAR(100)
+);
+
+CREATE TABLE Donations (
+    DonationID INT PRIMARY KEY,
+    DonorID INT,
+    OrphanageID INT,
+    DonationDate DATE,
+    FOREIGN KEY (DonorID) REFERENCES Donors(DonorID),
+    FOREIGN KEY (OrphanageID) REFERENCES Orphanages(OrphanageID)
+);
+
+CREATE TABLE DonationItems (
+    DonationItemID INT PRIMARY KEY,
+    DonationID INT,
+    ClothingID INT,
+    Quantity INT,
+    FOREIGN KEY (DonationID) REFERENCES Donations(DonationID),
+    FOREIGN KEY (ClothingID) REFERENCES ClothingItems(ClothingID)
+);
