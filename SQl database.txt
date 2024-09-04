@@ -34,3 +34,84 @@ CREATE TABLE DonationItems (
     FOREIGN KEY (DonationID) REFERENCES Donations(DonationID),
     FOREIGN KEY (ClothingID) REFERENCES ClothingItems(ClothingID)
 );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- Additional Donors (5 Total)
+INSERT INTO Donors (DonorID, DonorName, ContactInfo) VALUES (3, 'Michael Brown', 'michael@example.com');
+INSERT INTO Donors (DonorID, DonorName, ContactInfo) VALUES (4, 'Emily White', 'emily@example.com');
+INSERT INTO Donors (DonorID, DonorName, ContactInfo) VALUES (5, 'David Johnson', 'david@example.com');
+
+-- Additional ClothingItems (10 Total)
+INSERT INTO ClothingItems (ClothingID, ItemName, Size, Quantity) VALUES (3, 'Jeans', 'L', 75);
+INSERT INTO ClothingItems (ClothingID, ItemName, Size, Quantity) VALUES (4, 'Sweater', 'M', 60);
+INSERT INTO ClothingItems (ClothingID, ItemName, Size, Quantity) VALUES (5, 'Socks', 'Free', 200);
+INSERT INTO ClothingItems (ClothingID, ItemName, Size, Quantity) VALUES (6, 'Hat', 'S', 40);
+INSERT INTO ClothingItems (ClothingID, ItemName, Size, Quantity) VALUES (7, 'Scarf', 'Free', 50);
+INSERT INTO ClothingItems (ClothingID, ItemName, Size, Quantity) VALUES (8, 'Gloves', 'M', 30);
+INSERT INTO ClothingItems (ClothingID, ItemName, Size, Quantity) VALUES (9, 'Boots', 'L', 25);
+INSERT INTO ClothingItems (ClothingID, ItemName, Size, Quantity) VALUES (10, 'Raincoat', 'M', 45);
+
+-- Additional Orphanages (5 Total)
+INSERT INTO Orphanages (OrphanageID, OrphanageName, Location) VALUES (3, 'Safe Haven', 'City C');
+INSERT INTO Orphanages (OrphanageID, OrphanageName, Location) VALUES (4, 'Sunshine Orphanage', 'City D');
+INSERT INTO Orphanages (OrphanageID, OrphanageName, Location) VALUES (5, 'New Beginnings Home', 'City E');
+
+-- Additional Donations (15 Total)
+INSERT INTO Donations (DonationID, DonorID, OrphanageID, DonationDate) VALUES (3, 3, 3, '2024-09-03');
+INSERT INTO Donations (DonationID, DonorID, OrphanageID, DonationDate) VALUES (4, 4, 4, '2024-09-04');
+INSERT INTO Donations (DonationID, DonorID, OrphanageID, DonationDate) VALUES (5, 5, 1, '2024-09-05');
+INSERT INTO Donations (DonationID, DonorID, OrphanageID, DonationDate) VALUES (6, 1, 2, '2024-09-06');
+INSERT INTO Donations (DonationID, DonorID, OrphanageID, DonationDate) VALUES (7, 2, 3, '2024-09-07');
+INSERT INTO Donations (DonationID, DonorID, OrphanageID, DonationDate) VALUES (8, 3, 4, '2024-09-08');
+INSERT INTO Donations (DonationID, DonorID, OrphanageID, DonationDate) VALUES (9, 4, 5, '2024-09-09');
+INSERT INTO Donations (DonationID, DonorID, OrphanageID, DonationDate) VALUES (10, 5, 2, '2024-09-10');
+INSERT INTO Donations (DonationID, DonorID, OrphanageID, DonationDate) VALUES (11, 1, 3, '2024-09-11');
+INSERT INTO Donations (DonationID, DonorID, OrphanageID, DonationDate) VALUES (12, 2, 4, '2024-09-12');
+INSERT INTO Donations (DonationID, DonorID, OrphanageID, DonationDate) VALUES (13, 3, 5, '2024-09-13');
+INSERT INTO Donations (DonationID, DonorID, OrphanageID, DonationDate) VALUES (14, 4, 1, '2024-09-14');
+INSERT INTO Donations (DonationID, DonorID, OrphanageID, DonationDate) VALUES (15, 5, 3, '2024-09-15');
+
+-- Additional DonationItems (20 Total)
+INSERT INTO DonationItems (DonationItemID, DonationID, ClothingID, Quantity) VALUES (4, 3, 3, 15);
+INSERT INTO DonationItems (DonationItemID, DonationID, ClothingID, Quantity) VALUES (5, 3, 4, 10);
+INSERT INTO DonationItems (DonationItemID, DonationID, ClothingID, Quantity) VALUES (6, 4, 5, 50);
+INSERT INTO DonationItems (DonationItemID, DonationID, ClothingID, Quantity) VALUES (7, 4, 6, 20);
+INSERT INTO DonationItems (DonationItemID, DonationID, ClothingID, Quantity) VALUES (8, 5, 7, 25);
+INSERT INTO DonationItems (DonationItemID, DonationID, ClothingID, Quantity) VALUES (9, 5, 8, 30);
+INSERT INTO DonationItems (DonationItemID, DonationID, ClothingID, Quantity) VALUES (10, 6, 9, 15);
+INSERT INTO DonationItems (DonationItemID, DonationID, ClothingID, Quantity) VALUES (11, 6, 10, 20);
+INSERT INTO DonationItems (DonationItemID, DonationID, ClothingID, Quantity) VALUES (12, 7, 1, 5);
+INSERT INTO DonationItems (DonationItemID, DonationID, ClothingID, Quantity) VALUES (13, 7, 2, 10);
+INSERT INTO DonationItems (DonationItemID, DonationID, ClothingID, Quantity) VALUES (14, 8, 3, 20);
+INSERT INTO DonationItems (DonationItemID, DonationID, ClothingID, Quantity) VALUES (15, 8, 4, 15);
+INSERT INTO DonationItems (DonationItemID, DonationID, ClothingID, Quantity) VALUES (16, 9, 5, 60);
+INSERT INTO DonationItems (DonationItemID, DonationID, ClothingID, Quantity) VALUES (17, 9, 6, 25);
+INSERT INTO DonationItems (DonationItemID, DonationID, ClothingID, Quantity) VALUES (18, 10, 7, 30);
+INSERT INTO DonationItems (DonationItemID, DonationID, ClothingID, Quantity) VALUES (19, 10, 8, 40);
+INSERT INTO DonationItems (DonationItemID, DonationID, ClothingID, Quantity) VALUES (20, 11, 9, 20);
+INSERT INTO DonationItems (DonationItemID, DonationID, ClothingID, Quantity) VALUES (21, 11, 10, 25);
+INSERT INTO DonationItems (DonationItemID, DonationID, ClothingID, Quantity) VALUES (22, 12, 1, 10);
+INSERT INTO DonationItems (DonationItemID, DonationID, ClothingID, Quantity) VALUES (23, 12, 2, 20);
+
+
+
+SELECT * FROM Donors;
+SELECT * FROM ClothingItems;
+SELECT * FROM Orphanages;
+SELECT * FROM Donations;
